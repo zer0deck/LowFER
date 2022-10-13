@@ -39,7 +39,7 @@ class Experiment:
         self.label_smoothing = label_smoothing
         self.cuda = cuda
         self.n_gpu = torch.cuda.device_count() if cuda else None
-        self.batch_size = batch_size * self.n_gpu if self.n_gpu > 1 else batch_size
+        self.batch_size = batch_size * self.n_gpu if self.n_gpu else batch_size
         self.device = torch.device("cuda") if cuda else None
         self.output_dir = output_dir
         self.kwargs = {"input_dropout": input_dropout, "hidden_dropout1": hidden_dropout1,
@@ -81,9 +81,9 @@ class Experiment:
         
         for i in range(0, len(test_data_idxs), self.batch_size):
             data_batch, _ = self.get_batch(er_vocab, test_data_idxs, i)
-            e1_idx = torch.tensor(data_batch[:,0])
-            r_idx = torch.tensor(data_batch[:,1])
-            e2_idx = torch.tensor(data_batch[:,2])
+            e1_idx = torch.LongTensor(data_batch[:,0])
+            r_idx = torch.LongTensor(data_batch[:,1])
+            e2_idx = torch.LongTensor(data_batch[:,2])
             if self.cuda:
                 e1_idx = e1_idx.to(self.device)
                 r_idx = r_idx.to(self.device)
@@ -152,6 +152,7 @@ class Experiment:
         logger.info("Params: %d", sum(p.numel() for p in model.parameters() if p.requires_grad))
         
         for it in range(1, self.num_iterations+1):
+            logger.info("Iteration numer %d is running" % it)
             start_train = time.time()
             model.train()    
             losses = []
@@ -159,8 +160,8 @@ class Experiment:
             for j in range(0, len(er_vocab_pairs), self.batch_size):
                 data_batch, targets = self.get_batch(er_vocab, er_vocab_pairs, j)
                 opt.zero_grad()
-                e1_idx = torch.tensor(data_batch[:,0])
-                r_idx = torch.tensor(data_batch[:,1])  
+                e1_idx = torch.LongTensor(data_batch[:,0])
+                r_idx = torch.LongTensor(data_batch[:,1])  
                 if self.cuda:
                     e1_idx = e1_idx.to(self.device)
                     r_idx = r_idx.to(self.device)
