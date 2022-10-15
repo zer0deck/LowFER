@@ -75,7 +75,7 @@ Testing the algorithm proposed in the article ["LowFER: Low-rank Bilinear Poolin
           <td colspan=5 style="text-align: center;"><b>Our Data</b></td>
         </tr>
         <tr>
-            <td><b><em>RuWN21</em></b></td>
+            <td><b><em>RuWN21*</em></b></td>
             <td>0.91</td>
             <td>0.94</td>
             <td>0.94</td>
@@ -84,6 +84,7 @@ Testing the algorithm proposed in the article ["LowFER: Low-rank Bilinear Poolin
     </tbody>
 </table>
 
+> *after 30 iterations
 ## Requirements
 
 The original codebase was implemented in Python 3.6.6. Required packages are:
