@@ -1,6 +1,5 @@
 # LowFER.RuWordNet
 
-
 Testing the algorithm proposed in the article ["LowFER: Low-rank Bilinear Pooling for Link Prediction", ICML 2020](https://www.semanticscholar.org/paper/LowFER%3A-Low-rank-Bilinear-Pooling-for-Link-Amin-Varanasi/0126fce30b412d583f8e33714908dd09b86293d1) on the Russian-language thesaurus of the [WN](https://wordnet.princeton.edu/) format - ***[RuWordNet](https://ruwordnet.ru/ru)*** for 2021.
 
 ## Table of content
@@ -19,13 +18,13 @@ Testing the algorithm proposed in the article ["LowFER: Low-rank Bilinear Poolin
 1. Original WN18 data launch with hyperparams tuned by [Saadullah Amin](https://github.com/suamin):
 
     ```bash
-    python main.py --dataset WN18 --num_iterations 500 --batch_size 128 --lr 0.005 --dr 0.995 --edim 200 --rdim 30 --input_dropout 0.2 --hidden_dropout1 0.1 --hidden_dropout2 0.2 --label_smoothing 0.1 --k 10
+    python main.py --dataset WN18 --num_iterations 30 --batch_size 128 --lr 0.005 --dr 0.995 --edim 200 --rdim 30 --input_dropout 0.2 --hidden_dropout1 0.1 --hidden_dropout2 0.2 --label_smoothing 0.1 --k 10
     ```
 
 2. Our RuWordNet-2021 data launch:
 
     ```bash
-    python main.py --dataset rwn-2021
+    python main.py --dataset rwn-2021 --num_iterations 30 --batch_size 128 --lr 0.005 --dr 0.995 --edim 200 --rdim 30 --input_dropout 0.2 --hidden_dropout1 0.1 --hidden_dropout2 0.2 --label_smoothing 0.1 --k 10
     ```
 
 ## Results
@@ -77,10 +76,10 @@ Testing the algorithm proposed in the article ["LowFER: Low-rank Bilinear Poolin
         </tr>
         <tr>
             <td><b><em>RuWN21</em></b></td>
-            <td>0.0</td>
-            <td>0.0</td>
-            <td>0.0</td>
-            <td>0.0</td>
+            <td>0.91</td>
+            <td>0.94</td>
+            <td>0.94</td>
+            <td>0.92</td>
         </tr>
     </tbody>
 </table>

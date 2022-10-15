@@ -1,0 +1,55 @@
+Epoch 1 / time 410.78952 / loss 0.011008718
+Epoch 2 / time 402.08149 / loss 0.000795193
+Epoch 3 / time 414.00576 / loss 0.000707309
+Epoch 4 / time 406.74326 / loss 0.000666619
+Epoch 5 / time 405.07859 / loss 0.000659908
+Epoch 6 / time 414.34332 / loss 0.000619280
+Epoch 7 / time 413.02239 / loss 0.000576806
+Epoch 8 / time 413.16726 / loss 0.000547635
+Epoch 9 / time 413.36946 / loss 0.000511019
+Epoch 10 / time 414.64676 / loss 0.000463691
+Hits @10: 0.7548
+Hits @3: 0.7137
+Hits @1: 0.6821
+Mean rank: 890.7354
+Mean reciprocal rank: 0.7634475637425587
+Epoch 11 / time 413.20768 / loss 0.000459959
+Epoch 12 / time 413.34488 / loss 0.000438515
+Epoch 13 / time 415.47911 / loss 0.000429371
+Epoch 14 / time 422.62370 / loss 0.000420290
+Epoch 15 / time 416.38985 / loss 0.000417988
+Epoch 16 / time 413.87753 / loss 0.000412761
+Epoch 17 / time 413.06516 / loss 0.000409717
+Epoch 18 / time 413.09141 / loss 0.000406088
+Epoch 19 / time 414.60924 / loss 0.000405162
+Epoch 20 / time 413.92471 / loss 0.000402401
+Hits @10: 0.9338
+Hits @3: 0.92
+Hits @1: 0.9101
+Mean rank: 704.367
+Mean reciprocal rank: 0.9432827573534932
+Epoch 21 / time 412.23947 / loss 0.000401456
+Epoch 22 / time 413.17239 / loss 0.000398867
+Epoch 23 / time 414.62401 / loss 0.000398090
+Epoch 24 / time 413.96090 / loss 0.000397008
+Epoch 25 / time 414.04660 / loss 0.000395745
+Epoch 26 / time 413.99915 / loss 0.000394963
+Epoch 27 / time 414.98083 / loss 0.000394516
+Epoch 28 / time 414.38511 / loss 0.000393823
+Epoch 29 / time 414.27652 / loss 0.000392760
+Epoch 30 / time 416.90934 / loss 0.000392655
+Hits @10: 0.9411
+Hits @3: 0.937
+Hits @1: 0.919
+Mean rank: 629.013
+Mean reciprocal rank: 0.9085674021133472
+Hits @10: 0.9411
+Hits @3: 0.937
+Hits @1: 0.919
+Mean rank: 629.013
+Mean reciprocal rank: 0.9085674021133472
+Hits @10: 0.9431
+Hits @3: 0.94
+Hits @1: 0.927
+Mean rank: 622.051
+Mean reciprocal rank: 0.9112768304461627

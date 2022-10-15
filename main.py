@@ -116,6 +116,9 @@ class Experiment:
             'mr': np.mean(ranks),
             'mrr': np.mean(1./np.array(ranks))
         }
+        f=open('logs.txt', 'a')
+        f.write('\nHits @10: {0}'.format(metrics['h10']) + '\nHits @3: {0}'.format(metrics['h3']) + '\nHits @1: {0}'.format(metrics['h1']) + '\nMean rank: {0}'.format(metrics['mr']) + '\nMean reciprocal rank: {0}'.format(metrics['mrr']))
+        f.close()
         logger.info('Hits @10: {0}'.format(metrics['h10']))
         logger.info('Hits @3: {0}'.format(metrics['h3']))
         logger.info('Hits @1: {0}'.format(metrics['h1']))
@@ -177,6 +180,9 @@ class Experiment:
             if self.decay_rate:
                 scheduler.step()
             logger.info("Epoch %d / time %0.5f / loss %0.9f" % (it, time.time()-start_train, np.mean(losses)))
+            f=open('logs.txt', 'a')
+            f.write("Epoch %d / time %0.5f / loss %0.9f" % (it, time.time()-start_train, np.mean(losses)))
+            f.close()
             model.eval()
             if it % 10 == 0 and it != 0:
                 with torch.no_grad():
